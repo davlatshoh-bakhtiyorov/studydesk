@@ -5,7 +5,7 @@ async function uploadFile() {
     formData.append('file', fileInput.files[0]);
 
     try {
-        const response = await fetch('https://deskportal.netlify.app/upload', {
+        const response = await fetch('https://deskportal.netlify.app/uploads', {
             method: 'POST',
             body: formData
         });
