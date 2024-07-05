@@ -5,7 +5,7 @@ async function uploadFile() {
     formData.append('file', fileInput.files[0]);
 
     try {
-        const response = await fetch('http://localhost:3000/upload', {
+        const response = await fetch('https://deskportal.netlify.app/upload', {
             method: 'POST',
             body: formData
         });
@@ -27,7 +27,7 @@ function displayUploadedFiles(files) {
 
     files.forEach(file => {
         const link = document.createElement('a');
-        link.href = `http://localhost:3000/uploads/${file}`;
+        link.href = `https://deskportal.netlify.app/uploads/${file}`;
         link.textContent = file;
         link.download = file;
         uploadedFilesDiv.appendChild(link);
